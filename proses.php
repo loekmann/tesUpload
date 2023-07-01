@@ -1,6 +1,7 @@
 <?php
     include 'koneksi.php';
-
+    include 'fungsi.php';
+    
     //  proses tambah data start
     if(isset($_POST['act'])){
         if($_POST['act'] == "add"){
@@ -22,8 +23,6 @@
             }
             
             // echo $noi." | ".$nama_pgw." | ".$jenis_kel." | ".$jabatan_pgw." | ".$alamat_pgw." | ";
-
-            // echo "<br> Tambah Data <a href='index.php'>[Home]</a>";
 
             // Proses Tambah data end
 
