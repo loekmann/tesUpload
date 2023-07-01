@@ -27,13 +27,12 @@
       $alamat_pgw = $result['alamat_pgw'];
       
       // Proses edit data end
+
     // var_dump($result);
     // die();
 
   }
 ?>
-
-
 
 <html lang="en">
   <head>
