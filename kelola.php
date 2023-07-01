@@ -112,7 +112,7 @@
             <select value="<?php echo $jenis_kelamin; ?>" required id="jenis_kelamin" name="jenis_kelamin" class="form-select">
               <option <?php if($jenis_kelamin == 'Pilih Jenis Kelamin'){echo "selected";} ?> value="Pilih Jenis Kelamin">Pilih Jenis Kelamin</option>
               <option <?php if($jenis_kelamin == 'Laki-laki'){echo "selected";} ?> value="Laki-laki">Laki-Laki</option>
-              <option <?php if($jenis_kelamin == 'Perempuan'){echo "selected";} ?>value="Perempuan">Perempuan</option>
+              <option <?php if($jenis_kelamin == 'Perempuan'){echo "selected";} ?> value="Perempuan">Perempuan</option>
             </select>
           </div>
         </div>
