@@ -9,9 +9,6 @@
   $query = "SELECT * FROM tb_pegawai";
   $sql = mysqli_query($conn, $query );
   $no = 0;
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +17,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Bootstraps -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -35,11 +33,22 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
     />
 
+    <!-- Data Tables -->
+    <link rel="stylesheet" type="text/css" href="datatables/datatables.css">
+    <script type="text/javascript" src="datatables/datatables.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
 
     <title>Data Karyawan</title>
   </head>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#dt').DataTable();
+    } );
+  </script>
+
   <body>
     <!-- Navbar Start -->
     <nav class="navbar bg-light-tertiary mb-3">
@@ -76,7 +85,7 @@
         ?>
 
         <div class="table-responsive">
-          <table class="table align-middle table-bordered table-hover mt-2">
+          <table id="dt" class="table align-middle table-bordered table-hover mt-2">
             <thead class="table-dark">
               <tr>
                 <!--th ini sesuaikan sama yg ada di database-->
@@ -129,5 +138,6 @@
         </div>
       </div>
     </div>
+    <div class="mb-5"></div>
   </body>
 </html>
