@@ -1,7 +1,8 @@
 <?php
     include 'koneksi.php';
-    include 'fungsi.php';
-    
+    session_start();
+
+
     //  proses tambah data start
     if(isset($_POST['act'])){
         if($_POST['act'] == "add"){
@@ -16,6 +17,7 @@
             $query = "INSERT INTO tb_pegawai VALUES(null, '$noi_pgw', '$nama_pgw', '$jenis_kelamin', '$jabatan_pgw', '$alamat_pgw')";
             $sql = mysqli_query($conn, $query);
             if($sql){
+                $_SESSION['eksekusi'] = "Data Berhasil di Tambahkan !";
                 header("location: index.php");
                 // echo "Data berhasil ditambahkan <a href='index.php'>[Home]</a>";
             }else{

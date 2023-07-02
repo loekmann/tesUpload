@@ -1,6 +1,9 @@
 <?php 
   // include digunakan utk mngkoneksi isi yg ada di koneksi.php ke index.php
   include 'koneksi.php';
+  // session_start digunakan utk memulai session dn utk mengakhiri pakai session_destroy
+  session_start();
+
 
   // mysqli_query dignkan utk menampilkan/memproses data yg ada di database atau sql
   $query = "SELECT * FROM tb_pegawai";
@@ -56,11 +59,24 @@
       <div class="mb-4">
         <h5>Data yang telah disimpan</h5>
         <p>- Pt. Nicosa Sejahtera</p>
-        <a href="kelola.php" type="button" class="btn btn-primary">
+        <a href="kelola.php" type="button" class="btn btn-primary mb-3">
           <i class="bi bi-plus-circle"></i> Tambah Data
         </a>
+
+        <?php
+            if(isset($_SESSION['eksekusi'])):
+        ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?php echo $_SESSION['eksekusi']; ?>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <?php
+            session_destroy();
+            endif;
+        ?> p 11 menit 17.00
+
         <div class="table-responsive">
-          <table class="table align-middle table-bordered table-hover mt-3">
+          <table class="table align-middle table-bordered table-hover mt-2">
             <thead class="table-dark">
               <tr>
                 <!--th ini sesuaikan sama yg ada di database-->
