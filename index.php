@@ -71,9 +71,9 @@
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         <?php
-            session_destroy();
+            session_destroy(); //kode utk mengakhiri sesi
             endif;
-        ?> p 11 menit 17.00
+        ?>
 
         <div class="table-responsive">
           <table class="table align-middle table-bordered table-hover mt-2">

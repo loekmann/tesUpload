@@ -30,6 +30,7 @@
 
             // Proses Edit data start
             } else if($_POST['act'] == "edit"){
+                $_SESSION['eksekusi'] = "Data Berhasil di Edit!";
                 header("location: index.php");
                 // echo "Simpan Data <a href='index.php'>[Home]</a>";
                 // Data d bwh ini sesuaikan dg yg ada di localhost
@@ -57,6 +58,7 @@
                     $sql = mysqli_query($conn, $query);
 
                     if($sql){
+                        $_SESSION['eksekusi'] = "Data Berhasil di Hapus!";
                         header("location: index.php");
                         // echo "Data berhasil ditambahkan <a href='index.php'>[Home]</a>";
                     }else{
