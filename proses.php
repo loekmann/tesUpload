@@ -8,6 +8,7 @@
         if($_POST['act'] == "add"){
             
             // Data d bwh ini sesuaikan dg yg ada di localhost !
+            
             $noi_pgw = $_POST['noi_pgw'];
             $nama_pgw = $_POST['nama_pgw'];
             $jenis_kelamin = $_POST['jenis_kelamin'];
