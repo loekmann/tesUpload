@@ -1,0 +1,9 @@
+Web
+p = loekmannweb
+paass = PVo%rtPmuuh*febQGKz*
+
+dtbase
+user = lukman_coding
+pass = Lukmanlah_1900
+
+web url = https://loekmannweb.000webhostapp.com/index.php
